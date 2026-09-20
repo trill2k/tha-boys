@@ -420,7 +420,7 @@ function HomeScreen({
 
         <div className="teams-grid">
           <TeamList
-            title="Team 1"
+            title="5:10 PM"
             players={
               currentWeek.team1
             }
@@ -431,7 +431,7 @@ function HomeScreen({
           </div>
 
           <TeamList
-            title="Team 2"
+            title="5:20 PM"
             players={
               currentWeek.team2
             }
