@@ -7,6 +7,7 @@ import { supabase } from './lib/supabase'
 import { useAuth } from './hooks/useAuth'
 
 import Brand from './components/Brand'
+import WeatherStrip from './components/WeatherStrip'
 import TeamList from './components/TeamList'
 import AppHeader from './components/AppHeader'
 import BottomNav from './components/BottomNav'
@@ -400,6 +401,8 @@ function HomeScreen({
           Welcome back, {playerName}
         </h1>
       </section>
+
+      <WeatherStrip />
 
       <section className="current-week-card">
         <div className="section-heading">

@@ -1412,3 +1412,230 @@ button {
   font-size: 26px;
   line-height: 1;
 }
+/* ==============================
+   LEAGUE WEATHER
+   ============================== */
+
+.weather-strip {
+  margin: 14px 0 24px;
+}
+
+.weather-strip-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.weather-strip-heading > span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #777;
+}
+
+.weather-strip-heading small {
+  font-size: 10px;
+  color: #999;
+}
+
+
+/* MAIN WEATHER CARD */
+
+.weather-days {
+  display: grid;
+
+  /* Tuesday smaller, Wednesday larger */
+  grid-template-columns: 0.75fr 1.65fr;
+
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.weather-day {
+  min-width: 0;
+  padding: 14px 16px;
+}
+
+.weather-day + .weather-day {
+  border-left: 1px solid #e7e7e7;
+}
+
+.weather-day.league-day {
+  background: rgba(255, 217, 0, 0.09);
+}
+
+
+/* DAY HEADER */
+
+.weather-day-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.weather-icon {
+  font-size: 17px;
+  line-height: 1;
+}
+
+
+/* TUESDAY */
+
+.weather-main {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 800;
+
+  color: #111;
+  text-align: center;
+}
+
+.weather-detail {
+  display: block;
+
+  margin-top: 14px;
+
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+
+.weather-subdetail {
+  display: block;
+
+  margin-top: 12px;
+
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+}
+
+
+/* WEDNESDAY HOURLY FORECAST */
+
+.weather-hourly {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  width: 100%;
+}
+
+.weather-hour {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 2px 3px;
+
+  text-align: center;
+}
+
+.weather-hour-time {
+  font-size: 9px;
+  font-weight: 800;
+  color: #777;
+  white-space: nowrap;
+}
+
+.weather-hour-temp {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+
+  color: #111;
+}
+
+.weather-hour-rain {
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #777;
+}
+
+
+/* WEDNESDAY RAIN TOTAL */
+
+.weather-rain-before {
+  margin-top: 14px;
+  padding-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+  font-size: 10px;
+  color: #888;
+}
+
+.weather-rain-before strong {
+  font-size: 11px;
+  font-weight: 800;
+  color: #555;
+}
+
+
+/* LOADING */
+
+.weather-loading {
+  padding: 14px;
+
+  border: 1px solid #e7e7e7;
+  border-radius: 14px;
+
+  color: #888;
+  font-size: 11px;
+}
+
+
+/* SMALL PHONE ADJUSTMENT */
+
+@media (max-width: 520px) {
+  .weather-days {
+    grid-template-columns: 0.65fr 1.75fr;
+  }
+
+  .weather-day {
+    padding: 12px 10px;
+  }
+
+  .weather-hour-time {
+    font-size: 8px;
+  }
+
+  .weather-hour-temp {
+    font-size: 15px;
+  }
+
+  .weather-hour-rain {
+    font-size: 9px;
+  }
+
+  .weather-main {
+    font-size: 22px;
+  }
+}
+.weather-hour-icon {
+  font-size: 15px;
+  line-height: 1;
+  margin: 2px 0;
+}
